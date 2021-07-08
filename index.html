@@ -21,44 +21,40 @@
                 <div class="col-sm-3">
                     <div class="card">
                         <label for="search" class="form-label">Enter a City</label>
-                        <input type="search" id="search" class="form-control" placeholder="Richmond">
-                        <input type="submit" value="Search">
+                        <input type="search" id="input" class="form-control" placeholder="Richmond">
+                        <input type="submit" value="Search" id="btn">
                     </div>
                 </div>
                 <div class="col-sm-9">
                     <div class="card">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <h4>Current Conditions</h4>
+                        <ul class="current">
+                            <li id="temp"></li>
+                            <li id="wind"></li>
+                            <li id="humidity"></li>
+                            <li id=uvindex></li>
                         </ul>
                     </div>
-                    <div>
-                        <div class=col>
-                            <div class="card">monday</div>
-                        </div>
-                        <div class=col>
-                            <div class="card">tuesday</div>
-                        </div>
-                        <div class=col>
-                            <div class="card">wednesday</div>
-                        </div>
-                        <div class=col>
-                            <div class="card">thursday</div>
-                        </div>
-                        <div class=col>
-                            <div class="card">friday</div>
-                        </div>
-                    </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-3">
                     <ul class="cities">
-                        <li class="card">RIchmond</li>
-                        <li class="card">Washington DC</li>
-                        <li class="card">Charlotte</li>
-                        <li class="card">Raliegh</li>
-                        <li class="card">Roanoke</li>
+                        <li class="card" id="city1">RIchmond</li>
+                        <li class="card" id="city2">Washington DC</li>
+                        <li class="card" id="city3">Charlotte</li>
+                        <li class="card" id="city4">Raliegh</li>
+                        <li class="card" id="city5">Roanoke</li>
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <h4>Five Day Forecast</h4>
+                    <ul class="days">
+                        <li class="card inline" id="day1">Monday</li>
+                        <li class="card inline" id="day2">Tuesday</li>
+                        <li class="card inline" id="day3">Wednesday</li>
+                        <li class="card inline" id="day4">Thurday</li>
+                        <li class="card inline" id="day5">Friday</li>
                     </ul>
                 </div>
             </div>

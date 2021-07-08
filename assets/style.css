@@ -1,5 +1,8 @@
 ul.cities{
     padding:0;
     margin:2rem 0 0 0;
-    
+}
+
+.days li{
+    display: inline;
 }
