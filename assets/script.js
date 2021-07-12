@@ -22,23 +22,19 @@ var cityFour = document.getElementById("city4");
 var cityFive = document.getElementById("city5");
 //local storage array
 var cities = [cityOne, cityTwo, cityThree, cityFour, cityFive]
-//Variables for color changing
-// const rows = document.getElementsByClassName("row");
-// let currentHour = parseInt(moment().format('H'));
 
 //Pulling past searches from local storage
- //$("#city1").val(localstorage.city1);
-// $("#city2").val(localstorage.city2);
-// $("#city3").val(localstorage.city3);
-// $("#city4").val(localstorage.city4);
-// $("#city5").val(localstorage.city5);
+ $("#city1").val(cities[0].zip);
+ $("#city2").val(cities[1].zip);
+ $("#city3").val(cities[2].zip);
+ $("#city4").val(cities[3].zip);
+ $("#city5").val(cities[4].zip);
 
 var searchFunction = function(){
     let zipCode = zipInput.value;
     saveSearches(zipCode);
     console.log(zipCode);
     let apiAddress = "https://api.openweathermap.org/data/2.5/forecast?q="+ zipCode + "&appid=" + apiKey;
-    console.log(apiAddress);
     fetch(apiAddress)
         .then(function (response) {
         return response.json();
@@ -49,8 +45,8 @@ var searchFunction = function(){
 };
 
 var saveSearches = function(zip){
-    localStorage.setItem(city1, zip)
     cities[counter].innerHTML = zip
+    localStorage.setItem(cities[counter], zip)
     if (counter < 4 ){
         counter++
     }
@@ -63,34 +59,14 @@ var saveSearches = function(zip){
 
 searchBtn.addEventListener("click", searchFunction);
     
-// document.getElementById("btn").addEventListener("click", displayDate);
-
-
-//UV color changing
-// Array.from(rows).forEach(row => {
-//     let
-//       rowIdString = row.id,
-//       rowHour;
-//     if (rowIdString) {
-//       rowHour = parseInt(rowIdString);
-//     }
-//     if (rowHour) {
-//       if (currentHour === rowHour) {
-//         setColor(row, "red");
-//       } else if ((currentHour < rowHour) && (currentHour > rowHour - 6)) {
-//         setColor(row, "green");
-//       } else if ((currentHour > rowHour) && (currentHour < rowHour + 6)) {
-//         setColor(row, "lightgrey");
-//       } else {
-//         setColor(row, "white");
-//       }
-//     }
-//   });
-  
-//   function setColor(element, color) {
-//     element.style.backgroundColor = color;
-//   }
-
-
-
-
+cityOne.addEventListener("click", function(){
+    cityOne.value;
+    console.log(cityOne.value);
+    let apiAddress = "https://api.openweathermap.org/data/2.5/forecast?q="+ cityOne + "&appid=" + apiKey;
+    fetch(apiAddress)
+        .then(function (response) {
+        return response.json();
+        })
+        .then(function (data) {
+        console.log(data)})
+})

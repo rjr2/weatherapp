@@ -1,3 +1,21 @@
+:root {
+    --primary: #e8aeb7;
+    --secondary: #b8e1ff;
+    --tertiary: #a9fff7;
+    --fourth: #94fbab;
+    --fifth: #82aba1
+}
+
+body{
+    background-color: var(--secondary);
+}
+
+.card{
+    
+    box-shadow: 2px 2px black;
+}
+
+
 ul.cities{
     padding:0;
     margin:2rem 0 0 0;
