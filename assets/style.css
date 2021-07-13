@@ -21,6 +21,7 @@ ul.cities{
     margin:2rem 0 0 0;
 }
 
-.days li{
+.days{
     display: inline;
 }
+

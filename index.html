@@ -20,9 +20,11 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="card">
-                        <label for="search" class="form-label text-center">Enter a City</label>
-                        <input type="search" id="zipinput" class="form-control" placeholder="Richmond">
-                        <input type="submit" value="Search" id="btn">
+                        <form id="submit">
+                            <label for="search" class="form-label text-center">Enter a City</label>
+                            <input type="search" id="zipinput" class="form-control" placeholder="Richmond">
+                            <input type="submit" value="Search" id="btn">
+                        </form>
                     </div>
                 </div>
                 <div class="col-sm-9">
@@ -33,7 +35,6 @@
                             <li id="temp"></li>
                             <li id="wind"></li>
                             <li id="humidity"></li>
-                            <li id=uvindex></li>
                         </ul>
                     </div>
                 </div>
@@ -51,11 +52,36 @@
                 <div class="col-sm-9">
                     <h4 class="text-center">Five Day Forecast</h4>
                     <ul class="days">
-                        <li class="card inline" id="day1">Monday</li>
-                        <li class="card inline" id="day2">Tuesday</li>
-                        <li class="card inline" id="day3">Wednesday</li>
-                        <li class="card inline" id="day4">Thurday</li>
-                        <li class="card inline" id="day5">Friday</li>
+                        <li class="card inline">
+                            <ul>
+                                <li class="top" id="date1"></li>
+                                <li class="bottom" id="temp1"></li>
+                            </ul>
+                        </li>
+                        <li class="card inline">
+                            <ul>
+                                <li class="top" id="date2"></li>
+                                <li class="bottom" id="temp2"></li>
+                            </ul>
+                        </li>
+                        <li class="card inline">
+                            <ul>
+                                <li class="top" id="date3"></li>
+                                <li class="bottom" id="temp3"></li>
+                            </ul>
+                        </li>
+                        <li class="card inline">
+                            <ul>
+                                <li class="top" id="date4"></li>
+                                <li class="bottom" id="temp4"></li>
+                            </ul>
+                        </li>
+                        <li class="card inline">
+                            <ul>
+                                <li class="top" id="date5"></li>
+                                <li class="bottom" id="temp5"></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
